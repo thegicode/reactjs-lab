@@ -3,12 +3,10 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import './App.css';
 
-
 const Home = lazy(() => import('./routes/Home'));
 const About = lazy(() => import('./routes/About'));
 const Order = lazy(() => import('./Order'));
 const OrderHook = lazy(() => import('./OrderHook'));
-
 
 const App = () => (
   <Router>

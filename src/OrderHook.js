@@ -5,7 +5,7 @@ import './order.css';
 function Order(){
   const [isShowPopup, setIsShowPopup] = useState(false);
   const [data, setData] = useState({});
- 
+
   function handlePopup(){
     setIsShowPopup(!isShowPopup);
   }
@@ -22,14 +22,12 @@ function Order(){
 
       <h2>Order</h2>
 
-
     	{ Object.keys(data).length > 0  && 
     		<div className="order-data">
       		<p>{data.addr}</p>
       		<p>{data.mobile}</p>
     		</div>
     	}
-
 
       <button onClick={handlePopup}>Show Popup</button>
 

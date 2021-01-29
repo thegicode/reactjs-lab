@@ -1,7 +1,12 @@
+const css = {
+	'display' : 'flex',
+	'justify-content' : 'center',
+	'margin-top': '3rem'
+};
 
 function About(){
 	return(
-		<div className="about">About</div>
+		<div style={css}>About</div>
 	);
 }
 
