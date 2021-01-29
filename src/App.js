@@ -1,12 +1,11 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import './App.css';
-
-const Home = lazy(() => import('./routes/Home'));
-const About = lazy(() => import('./routes/About'));
-const Order = lazy(() => import('./Order'));
-const OrderHook = lazy(() => import('./OrderHook'));
+const 
+  Home = lazy(() => import('./routes/Home')),
+  About = lazy(() => import('./routes/About')),
+  Order = lazy(() => import('./Order')),
+  OrderHook = lazy(() => import('./OrderHook'));
 
 const App = () => (
   <Router>
@@ -20,7 +19,5 @@ const App = () => (
     </Suspense>
   </Router>
 );
-
-
 
 export default App;
