@@ -1,8 +1,18 @@
 
-.testcontent {
-	color: black;
+.order{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
+.order h2 {
+	margin-top: 5rem;
+}
+.order-data{
+	margin-bottom: 5rem;
+	text-align: center;
+}
 .popupContent {
 	position: fixed; top: 50px; right: 50px; bottom: 50px; left: 50px;
 	background: gray;

@@ -18,24 +18,22 @@ function Order(){
 
   return (
 
-  	<div> 
+  	<div className="order"> 
 
-      <p>Order</p>
+      <h2>Order</h2>
 
-      <br/><br/>
 
     	{ Object.keys(data).length > 0  && 
-    		<div>
+    		<div className="order-data">
       		<p>{data.addr}</p>
       		<p>{data.mobile}</p>
     		</div>
     	}
 
-    	<br/><br/>
 
       <button onClick={handlePopup}>Show Popup</button>
 
-      {isShowPopup && 
+      { isShowPopup && 
       	<PopupContent onCloseButtonClick = {handlePopupClose} />
       }
 

@@ -32,18 +32,16 @@ class Order extends React.Component {
 
   render() {
     return (
-    	<div>
-    	Order
-    	<br/>
-    	<br/>
-    	{ Object.keys(this.state.data).length > 0  && 
-    		<div>
-    		<p>{this.state.data.addr}</p>
-    		<p>{this.state.data.mobile}</p>
-    		</div>
-    	}
-    	<br/>
-    	<br/>
+    	<div className="order">
+      	<h2>Order</h2>
+      	
+      	{ Object.keys(this.state.data).length > 0  && 
+      		<div className="order-data">
+        		<p>{this.state.data.addr}</p>
+        		<p>{this.state.data.mobile}</p>
+      		</div>
+      	}
+      	
 	      <button onClick={this.handlePopup}>Show Popup</button>
 	      {this.state.isShowPopup && 
 	      	<PopupContent onCloseButtonClick = {this.handlePopupClose} />
