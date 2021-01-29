@@ -1,0 +1,14 @@
+
+.testcontent {
+	color: black;
+}
+
+.popupContent {
+	position: fixed; top: 50px; right: 50px; bottom: 50px; left: 50px;
+	background: gray;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
