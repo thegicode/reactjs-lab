@@ -6,15 +6,20 @@ function Order(){
   const [isShowPopup, setIsShowPopup] = useState(false);
   const [data, setData] = useState({});
 
-  function handlePopup(){
-    setIsShowPopup(!isShowPopup);
+  function openPopup(){
+    window.history.pushState('popup-addr', '', '/popup-addr');
+    setIsShowPopup( true );
   }
 
-  const handlePopupClose = (data) => {
-  	handlePopup();
+  const closePopup = (data) => {
+    window.history.back();
+    setIsShowPopup( false );
     setData(data);
-    // console.log('data', data);
   };
+
+  window.onpopstate = (event) => {
+    setIsShowPopup( false );
+  }
 
   return (
 
@@ -29,10 +34,10 @@ function Order(){
     		</div>
     	}
 
-      <button onClick={handlePopup}>Show Popup</button>
+      <button onClick={openPopup}>Show Popup</button>
 
       { isShowPopup && 
-      	<PopupContent onCloseButtonClick = {handlePopupClose} />
+      	<PopupContent onCloseButtonClick = {closePopup} />
       }
 
     </div>

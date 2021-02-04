@@ -1,7 +1,6 @@
 import React, { Suspense } from 'react';
 import loadable from '@loadable/component'
 
-// import OrderHook from './OrderHook';
 import './App.css';
 
 // const Home = loadable(() => import('./routes/Home'));
