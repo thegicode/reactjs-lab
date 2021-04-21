@@ -7,7 +7,7 @@ const
   Order = lazy(() => import('./Order')),
   OrderHook = lazy(() => import('./OrderHook')),
   HistoryTest = lazy(() => import('./HistoryTest')),
-  List = lazy(() => import('./routes/List'));
+  ListScroll = lazy(() => import('./routes/ListScroll'));
 
 const App = () => (
   <Router>
@@ -18,7 +18,7 @@ const App = () => (
         <Route path="/order" component={Order}/>
         <Route path="/orderhook" component={OrderHook}/>
         <Route path="/historytest" component={HistoryTest}/>
-        <Route path="/list" component={List}/>
+        <Route path="/listscroll" component={ListScroll}/>
       </Switch>
     </Suspense>
   </Router>
