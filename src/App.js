@@ -6,7 +6,8 @@ const
   About = lazy(() => import('./routes/About')),
   Order = lazy(() => import('./Order')),
   OrderHook = lazy(() => import('./OrderHook')),
-  HistoryTest = lazy(() => import('./HistoryTest'));
+  HistoryTest = lazy(() => import('./HistoryTest')),
+  List = lazy(() => import('./routes/List'));
 
 const App = () => (
   <Router>
@@ -17,6 +18,7 @@ const App = () => (
         <Route path="/order" component={Order}/>
         <Route path="/orderhook" component={OrderHook}/>
         <Route path="/historytest" component={HistoryTest}/>
+        <Route path="/list" component={List}/>
       </Switch>
     </Suspense>
   </Router>
