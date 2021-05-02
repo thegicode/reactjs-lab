@@ -2,7 +2,7 @@ import React from 'react';
 import './scrolltest.css';
 
 class ScrollTest extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
     this.state = {
         isNavFix: false
@@ -12,16 +12,16 @@ class ScrollTest extends React.Component {
     this.handleScroll = this.handleScroll.bind(this);
   }
 
-  handleScroll(navTop){
+  handleScroll (navTop) {
     const isFix = window.scrollY > navTop ? true : false;
-    if( isFix != this.state.isNavFix ) {
-      this.setState({
+    if (isFix !== this.state.isNavFix) {
+      this.setState ({
         isNavFix: isFix
       })
     }
   }
 
-  componentDidMount(){
+  componentDidMount () {
     console.log('componentDidMount')
 
     const navEl = this.nav.current;
@@ -32,21 +32,21 @@ class ScrollTest extends React.Component {
 
   }
 
-  componentWillUnmount(){
+  componentWillUnmount () {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
-  render() {
+  render () {
     console.log('render')
 
     return (
-        <div className="scroll-test">
+        <div className="scrollTest">
           <h2>Scroll Test</h2>
           
-            <div className="scrollTest">
+            <div className="div">
               <header className="nav" ref={this.nav} data-fix={this.state.isNavFix}></header>
             </div>
-      </div>
+        </div>
     );
   }
 }
