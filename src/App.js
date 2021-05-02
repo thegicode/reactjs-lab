@@ -6,15 +6,15 @@ const
   About = lazy(() => import('./routes/About')),
   Order = lazy(() => import('./Order')),
   OrderHook = lazy(() => import('./OrderHook')),
-  // HistoryTest = lazy(() => import('./HistoryTest'));
   HashTest = lazy(() => import('./HashTest')),
+  HistoryTest = lazy(() => import('./HistoryTest')),
+  ListScroll = lazy(() => import('./routes/ListScroll')),
   ScrollTest = lazy(() => import('./routes/ScrollTest'));
 
 const props ={
   a: 1,
   b: 2
 };
-
 
 const App = () => (
   <Router>
@@ -23,11 +23,11 @@ const App = () => (
         <Route path="/about" component={About}/>
         <Route path="/order" component={Order}/>
         <Route path="/orderhook" component={OrderHook}/>
-       { /*<Route path="/historytest" component={HistoryTest}/>*/}
+       { <Route path="/historytest" component={HistoryTest}/>}
         <Route path="/hashTest" component={HashTest} props={props} />
+        <Route path="/listscroll" component={ListScroll}/>
+        {/*<Route component={HashTest}/>*/}
         <Route path="/scrollTest" component={ScrollTest} />
-        <Route component={HashTest}/>
-        
       </Switch>
     </Suspense>
   </Router>
