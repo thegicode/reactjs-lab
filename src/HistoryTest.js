@@ -1,4 +1,4 @@
-import React ,{Component} from 'react';
+import React, {Component} from 'react';
 class HistoryTest extends Component {
   state = {
     pageName: ''
@@ -46,3 +46,4 @@ function Page2() {
   return <h2>여기는 Page2입니다.</h2>
 }
 export default HistoryTest;
+
