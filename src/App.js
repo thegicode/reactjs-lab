@@ -3,13 +3,13 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const 
   // Home = lazy(() => import('./routes/Home')),
-  About = lazy(() => import('./routes/About')),
-  Order = lazy(() => import('./Order')),
-  OrderHook = lazy(() => import('./OrderHook')),
+  About = lazy(() => import('./components/About')),
+  Order = lazy(() => import('./components/Order')),
+  OrderHook = lazy(() => import('./components/OrderHook')),
   HashTest = lazy(() => import('./HashTest')),
   HistoryTest = lazy(() => import('./HistoryTest')),
-  ListScroll = lazy(() => import('./routes/ListScroll')),
-  ScrollTest = lazy(() => import('./routes/ScrollTest'));
+  ListScroll = lazy(() => import('./components/ListScroll')),
+  ScrollTest = lazy(() => import('./components/ScrollTest'));
 
 const props ={
   a: 1,

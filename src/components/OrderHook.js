@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import PopupContent from './PopupContent';
-import './order.css';
+import '../css/order.css';
 
 function Order(){
   const [isShowPopup, setIsShowPopup] = useState(false);

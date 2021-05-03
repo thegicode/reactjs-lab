@@ -1,5 +1,5 @@
 import React from 'react';
-import './scrolltest.css';
+import '../css/scrolltest.css';
 
 class ScrollTest extends React.Component {
   constructor (props) {
