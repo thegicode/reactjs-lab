@@ -22,7 +22,6 @@ class ListScroll extends React.Component {
                         <span>{item}</span>
                     </li>
                 )}
-                <li className="space"></li>
             </ul>
         );
     }
