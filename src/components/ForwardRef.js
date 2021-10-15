@@ -7,20 +7,28 @@ const css = {
 };
 
 const Input = forwardRef((props, ref) => {
-    return <input type="text" data-index={props.index} ref={ref}/>;
+    return <input type="text" 
+            data-index={props.index} 
+            onChange={props.onChange} 
+            ref={ref} />;
 });
 
 function FowardRefCpnt() {
-  const inputEl = useRef(null);
+    const inputEl = useRef(null);
 
-  function handleClick() {
-    inputEl.current.focus();
-  }
+    function handleClick() {
+        inputEl.current.focus();
+    }
+
+    function handleChange() {
+        console.log('handleChange')
+    }
+
 
   return (
-	<div style={css}>
-      <Input ref={inputEl} index='0' />
-      <button onClick={handleClick}>입력란 포커스</button>
+    <div style={css}>
+        <Input ref={inputEl} index='0' onChange={handleChange} />
+        <button onClick={handleClick}>입력란 포커스</button>
     </div>
   );
 }
